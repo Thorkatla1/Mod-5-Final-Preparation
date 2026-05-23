@@ -11,12 +11,12 @@ async function main() {
 main();
 
 function showUserPosts(id) {
-  window.location.href = `${window.location.origin}/user.html`
- 
+  localStorage.setItem("id", id);
+   window.location.href = `${window.location.origin}/user.html` 
 }
 
 function userHTML(user) {
-  console.log(window.location)
+ 
   return `<div class="user-card" onclick="showUserPosts(${user.id})">
     <div class="user-card__container">
       <h3>${user.name}</h3>
